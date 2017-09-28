@@ -1,0 +1,85 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    color: dimgray;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+.wrapper {
+    height: 100%;
+}
+.panelLeft, .panelRight {
+    height: 100%;
+    width: 75%;
+    float: left;
+    background-color: dimgray;
+    color: white;
+    overflow-y: auto;
+}
+.panelLeft .content, .panelRight .content  {
+    padding: 20px;
+}
+.panelLeft{
+    background-image: url("image/pia17269_right-navcam-sol329.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.panelLeft .content li {
+    margin-bottom: 5px;
+    font-size: x-large;
+    font-weight: bolder;
+
+}
+.panelLeft .content img {
+    margin-top: 0px;
+    margin-left: 57%;
+    position: fixed;
+    height: 100px;
+    width: 100px;
+
+}
+.panelLeft .content ul li.notFound {
+    color: #FF907F;
+}
+.panelRight {
+    width: 25%;
+    background-color: lightcoral;
+}
+.panelRight .content .h2  {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+input  {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 0;
+    font-size: 1em;
+}
+.panelRight .content ul  {
+    margin-bottom: 20px;
+}
+.panelRight .content ul li  {
+    margin-bottom: 5px;
+
+}
+.panelRight .content ul li span  {
+    color: honeydew;
+    font-weight: 700;
+}
+.panelRight .content form input  {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 0;
+    font-size: 1em;
+}
+.panelRight .content form .submitForm  {
+    cursor: pointer;
+    background-color: dimgray;
+    color: honeydew;
+}
