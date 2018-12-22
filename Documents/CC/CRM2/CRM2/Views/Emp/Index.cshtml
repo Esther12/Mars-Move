@@ -1,0 +1,67 @@
+@model IEnumerable<CRM2.Models.Employee>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Emp_lname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Emp_fname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Emp_phone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Emp_email)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emp_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.Cus_ID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Emp_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Emp_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Emp_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

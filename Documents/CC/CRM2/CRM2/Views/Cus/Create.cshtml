@@ -1,0 +1,78 @@
+@model CRM2.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cus_lname" class="control-label"></label>
+                <input asp-for="Cus_lname" class="form-control" />
+                <span asp-validation-for="Cus_lname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cus_fname" class="control-label"></label>
+                <input asp-for="Cus_fname" class="form-control" />
+                <span asp-validation-for="Cus_fname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cus_phone" class="control-label"></label>
+                <input asp-for="Cus_phone" class="form-control" />
+                <span asp-validation-for="Cus_phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cus_email" class="control-label"></label>
+                <input asp-for="Cus_email" class="form-control" />
+                <span asp-validation-for="Cus_email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cus_street" class="control-label"></label>
+                <input asp-for="Cus_street" class="form-control" />
+                <span asp-validation-for="Cus_street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cus_city" class="control-label"></label>
+                <input asp-for="Cus_city" class="form-control" />
+                <span asp-validation-for="Cus_city" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cus_pro" class="control-label"></label>
+                <input asp-for="Cus_pro" class="form-control" />
+                <span asp-validation-for="Cus_pro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cus_country" class="control-label"></label>
+                <input asp-for="Cus_country" class="form-control" />
+                <span asp-validation-for="Cus_country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inv_ID" class="control-label"></label>
+                <select asp-for="Inv_ID" class ="form-control" asp-items="ViewBag.Inv_ID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Horse</title>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="main">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                      <a class="navbar-brand" href="#">The Horse</a>
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Time Tellers <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Leather Goods</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Lifestyle</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">LookBook</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#">Our Story</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#">Bag(<span id="items">0</span>)</a>
+                                </li>
+                            </ul>
+                      </form>
+                    </div>
+                  </nav>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+              <div class = "Part-3">
+                    <div class="Part-3-side"> 
+                        <img src="watch1.jpg" id="side-img1" onclick="image1()" alt="loading"/>
+                        <br/>
+                        <img src="watch2.jpg" id="side-img2" onclick="image2()" alt="loading"/>
+                        <br/>
+                        <img src="watch3.jpg" id="side-img3" onclick="image3()" alt="loading"/>
+                    </div>
+                    <div class="Part-3-main">
+                        <img src="watch1.jpg" id="main-img" alt="loading" name = mainImg>
+                    </div>
+            </div>
+          </div>
+        <div class="col">
+            <div class="Part-4">
+                <h4>Brushed Gunmetal Olive</h4>
+                <div class="Part-4-review">
+                <span>Reviews</span>
+                <span>Add Your Review</span>
+                </div>
+                <p>
+                    This watch is constructed with a sandblasted Gunmetal stanless stell case, white face with minimallist silver indexing, and finished with an olive leather band. The Horse lettering on dial and at buckle closure.
+                </p>
+                <h5>$149</h5>
+            </br>
+                <button onclick="buttonClick()" >Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+</html>

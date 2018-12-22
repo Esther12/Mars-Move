@@ -1,0 +1,91 @@
+@model IEnumerable<CRM2.Models.Customer>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cus_lname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cus_fname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cus_phone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cus_email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cus_street)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cus_city)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cus_pro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cus_country)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Invoice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cus_lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cus_fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cus_phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cus_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cus_street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cus_city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cus_pro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cus_country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Invoice.Inv_ID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Cus_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Cus_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Cus_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

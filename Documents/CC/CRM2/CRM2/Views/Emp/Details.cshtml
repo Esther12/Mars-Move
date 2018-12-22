@@ -1,0 +1,57 @@
+@model CRM2.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_lname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Emp_lname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_fname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Emp_fname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Emp_phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Emp_email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Cus_ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Emp_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

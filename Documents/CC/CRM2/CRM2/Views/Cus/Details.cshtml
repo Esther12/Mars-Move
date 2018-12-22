@@ -1,0 +1,81 @@
+@model CRM2.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cus_lname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cus_lname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cus_fname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cus_fname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cus_phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cus_phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cus_email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cus_email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cus_street)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cus_street)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cus_city)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cus_city)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cus_pro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cus_pro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cus_country)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cus_country)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Invoice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Invoice.Inv_ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Cus_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>
